@@ -6,9 +6,23 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<!--<ion-content padding>-->
+  <ion-content>
+    <!-- <div #map id="map" style="height:100%;"></div>-->
+    <div id="map_canvas">
+      <!-- <ion-searchbar></ion-searchbar> -->
+      <div class="searchbox" (click)="opensearchmodal()">{{searchData ? searchData : 'Search'}}</div>
+        <!-- <section class="topnotification-wrapper">
+            <section class="topnotification">
+              <ion-grid class="no-padding">
+                <ion-row>
+                  <ion-col width-10 class="marker">
+                    <img src="assets/images/marker.png">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </section>
+          </section>-->
+    </div>
+    </ion-content>
+  <!--</ion-content>-->

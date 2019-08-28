@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="backtoMapScreen(null)">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Find Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="search-model">
+  <!-- <div class="location">
+    <div class="search-box"> -->
+      <!-- <ion-searchbar 
+      [(ngModel)]="searchtext"  
+      (ionInput)="pickupSearch()"></ion-searchbar> -->
+    <!-- </div>
+  </div> -->
+  <ion-searchbar [(ngModel)]="searchtext" (ionInput)="pickupSearch()"> </ion-searchbar>
+
+  <ion-list *ngIf="autocompleteItems.length>0">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>
